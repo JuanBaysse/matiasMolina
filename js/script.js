@@ -13,13 +13,21 @@ const navToggle = document.querySelector(".nav_toggle"),
 
 /*===== TYPING TEXT =====*/
 
-    var typed = new Typed(".profession_text", {
-        strings: ["caywer", "Content Creator", "Coach"],
-        typeSpeed: 70,
-        backSpeed: 70,
-        loop: true,
-    })
+const words = ['lawyer', 'coach', 'content creator'];
+let currentWordIndex = 0;
+const professionTextElement = document.querySelector('.profession_text');
 
+function typeWriterEffect() {
+  const currentWord = words[currentWordIndex];
+  professionTextElement.textContent = currentWord;
+  currentWordIndex = (currentWordIndex + 1) % words.length;
+}
+
+// Start the effect
+typeWriterEffect();
+
+// Change the word every 3 seconds
+setInterval(typeWriterEffect, 2000);
 
 /*===== COUNTER =====*/
 
