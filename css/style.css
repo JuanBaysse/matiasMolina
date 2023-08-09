@@ -7,7 +7,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.calendly-widget-container {
+    background-color: #01181d; /* Set the background color to black */
+    position: relative; /* Make sure the container is positioned */
+}
 img{
     max-width: 100%;
     height: auto;
@@ -88,9 +91,10 @@ h6{
 }
 
 .img-cover{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* This maintains the aspect ratio while covering the container */
+    border-radius: 50%;
 }
 
 .img-holder{
