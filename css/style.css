@@ -14,6 +14,7 @@
 img{
     max-width: 100%;
     height: auto;
+    text-align: center;
 }
 
 a{
@@ -24,9 +25,12 @@ a{
 li{
     list-style: none;
 }
+span{
+    display: block;
+    color: white;
+}
 
 a,
-span,
 button,
 input,
 img,
@@ -911,6 +915,9 @@ textarea{
         color: #ffffff; /* Color del texto (ajusta según tus necesidades) */
         text-transform: uppercase; /* Opcional: poner el texto en mayúsculas */
         font-weight: bold; /* Opcional: darle un peso de fuente más fuerte */
+        display: inline-block;
+        transition: opacity 0.5s;
     }
-  
+    
+   
 }

@@ -1,15 +1,24 @@
 
 /*===== SHOW MENU =====*/
 
-const navToggle = document.querySelector(".nav_toggle"),
-      navMenu = document.querySelector(".nav_menu");
+// Get the necessary elements
+const navToggle = document.querySelector('.nav_toggle');
+const navMenu = document.querySelector('.nav_menu');
+const navLinks = document.querySelectorAll('.nav_link');
 
+// Add click event listener to the toggle button
+navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    navMenu.classList.toggle('show-menu');
+});
 
-    navToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("show-menu");
-        navToggle.classList.toggle("active");
-    })
-
+// Add click event listeners to each navigation link
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('show-menu');
+    });
+});
 
 /*===== TYPING TEXT =====*/
 
